@@ -18,13 +18,13 @@ namespace MoodAnalyser
             try
             {
                 if (message == null || message == string.Empty)
-                    throw new Exception();
+                    throw new MoodAnalysisException();
                 if(message == sadMood)
                     return "SAD";
                 if(message == happyMood)
                     return "HAPPY";
             }
-            catch (Exception)
+            catch (MoodAnalysisException)
             {
                 return "HAPPY";
             }
