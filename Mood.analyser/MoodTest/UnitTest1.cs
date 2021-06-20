@@ -32,5 +32,17 @@ namespace MoodTest
             Assert.AreEqual(excepted, result);
 
         }
+        [Test]
+        public void When_Invalid_ReturnHAPPYMood()
+        {
+            ///Arrange
+            string message = "";
+            string excepted = "HAPPY";
+            ///Act
+            MoodAnalyserr mood = new MoodAnalyserr(message);
+            string result = mood.MoodCheck();
+            ///Assert
+            Assert.AreEqual(excepted, result);
+        }
     }
 }

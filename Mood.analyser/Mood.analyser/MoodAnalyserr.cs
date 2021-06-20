@@ -15,10 +15,19 @@ namespace MoodAnalyser
         }
         public string MoodCheck()
         {
-            if (message == sadMood)
-                return "SAD";
-            if (message == happyMood)
+            try
+            {
+                if (message == null || message == string.Empty)
+                    throw new Exception();
+                if(message == sadMood)
+                    return "SAD";
+                if(message == happyMood)
+                    return "HAPPY";
+            }
+            catch (Exception)
+            {
                 return "HAPPY";
+            }
             return null;
         }
     }
